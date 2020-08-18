@@ -1,0 +1,27 @@
+{% extends "layoutEgSite.html" %}
+
+{% block heading %}
+    Chad Ivic Home Page
+{% endblock %}
+
+{% block body %}
+
+
+    <a href="{{ url_for('hobbiesPage') }}">Hobbies</a>
+    <a href="{{ url_for('workPage') }}">Work</a>
+    <a href="{{ url_for('theform') }}">Post A Message</a><br>
+    <h1>Posts Stored in Database</h1>
+    {% for item in results %}
+    <h2>ID: {{ item.id }} Name: {{ item.name }} Post: {{ item.message }}</h2>
+    {% endfor %}
+
+    <p>Some info about Mr Ivic   <br>
+       ...........................<br>
+       ...........................<br>
+       ...........................<br>
+                                  <br>
+
+    </p>
+
+<img src="{{ url_for('static', filename='images/code.jpg') }}">
+{% endblock %}

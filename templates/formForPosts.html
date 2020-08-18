@@ -1,0 +1,18 @@
+{% extends 'layoutEgSite.html' %}
+
+{% block heading %}Posts Page{% endblock %}
+
+{% block body %}
+
+
+<h1>Please fill out the form</h1>
+<form method="POST" action="/theform">
+	Name:<br>
+		          	<input type="text" name="name">
+			<br>
+	Post:<br>
+		          	<input type="text" name="message">
+				<br><br>
+		          	<input type="submit" value="Submit">
+	</form>
+{% endblock %}

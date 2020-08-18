@@ -1,0 +1,32 @@
+{% extends "layoutEgSite.html" %}
+
+{% block heading %}
+    Hobbies Page
+{% endblock %}
+
+{% block body %}
+    <p>
+This is some info about my hobbiesPage<br>
+                          <br>
+...........................<br>
+...........................<br>
+...........................<br>
+                           <br>
+...........................<br>
+...........................<br>
+...........................<br>
+
+...........................<br>
+...........................<br>
+...........................<br>
+                           <br>
+    </p>
+
+<img src="{{ url_for('static', filename='images/SurfingWithSave.jpeg') }}">
+<br>
+<br>
+    <!--<a href="{{ url_for('homePage') }}">Go back</a>-->
+    <form action="/homePage">
+         <button type="submit">Click me to go to home page</button>
+      </form>
+{% endblock %}
